@@ -1,68 +1,66 @@
-// jquery 
-$(document).ready(function(){
-  $('.tab-btn').on('click', function(){
-    var target = $(this).data('tab-btn');
-    $('.tab-btn').removeClass('active');
-    $(this).addClass('active');
-    $('.tab-content').removeClass('active');
-    $('[data-tab-content="' + target + '"]').addClass('active');
+// jquery
+$(document).ready(function () {
+  $(".tab-btn").on("click", function () {
+    var target = $(this).data("tab-btn");
+    $(".tab-btn").removeClass("active");
+    $(this).addClass("active");
+    $(".tab-content").removeClass("active");
+    $('[data-tab-content="' + target + '"]').addClass("active");
   });
 });
 
+// JS
 
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const navList = document.getElementById("nav-list");
+  const icon = hamburgerBtn.querySelector("ion-icon");
 
-// JS 
+  hamburgerBtn.addEventListener("click", () => {
+    navList.classList.toggle("active");
+    hamburgerBtn.classList.toggle("active"); // Toggle the active class on the button
 
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const navList = document.getElementById('nav-list');
-  const icon = hamburgerBtn.querySelector('ion-icon');
-
-  hamburgerBtn.addEventListener('click', () => {
-      navList.classList.toggle('active');
-      hamburgerBtn.classList.toggle('active'); // Toggle the active class on the button
-
-      if (navList.classList.contains('active')) {
-          icon.setAttribute('name', 'close-outline');
-      } else {
-          icon.setAttribute('name', 'menu-outline');
-      }
-  });
-});
-
-// scroll 
-
-document.addEventListener('DOMContentLoaded', () => {
-  const header = document.getElementById('Navbar');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-      header.classList.add('sticky');
-      header.classList.remove('slow-transition');
+    if (navList.classList.contains("active")) {
+      icon.setAttribute("name", "close-outline");
     } else {
-      header.classList.remove('sticky');
-      header.classList.add('slow-transition');
+      icon.setAttribute("name", "menu-outline");
+    }
+  });
+});
+
+// scroll
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("Navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header.classList.add("sticky");
+      header.classList.remove("slow-transition");
+    } else {
+      header.classList.remove("sticky");
+      header.classList.add("slow-transition");
     }
   });
 
   // Adjust scroll position on page load, in case user loads the page already scrolled
   if (window.scrollY > 0) {
-    header.classList.add('sticky');
+    header.classList.add("sticky");
   }
 });
 
-//   cursor 
+//   cursor
 function updateCursorVisibility() {
-  const cursor = document.querySelector('.custom-cursor');
+  const cursor = document.querySelector(".custom-cursor");
   if (window.innerWidth <= 768) {
-    cursor.style.display = 'none';
+    cursor.style.display = "none";
   } else {
-    cursor.style.display = 'block';
+    cursor.style.display = "block";
   }
 }
 
-document.addEventListener('mousemove', function(e) {
-  const cursor = document.querySelector('.custom-cursor');
+document.addEventListener("mousemove", function (e) {
+  const cursor = document.querySelector(".custom-cursor");
   if (!cursor || window.innerWidth <= 768) return;
 
   const cursorWidth = cursor.offsetWidth;
@@ -70,13 +68,16 @@ document.addEventListener('mousemove', function(e) {
 
   // Calculate the maximum allowed positions
   const maxX = document.documentElement.clientWidth - cursorWidth / 2;
-  const maxY = document.documentElement.clientHeight + window.scrollY - cursorHeight / 2;
+  const maxY =
+    document.documentElement.clientHeight + window.scrollY - cursorHeight / 2;
 
   // Clamp the cursor position within the allowed bounds
   const posX = Math.min(maxX, Math.max(cursorWidth / 2, e.pageX));
   const posY = Math.min(maxY, Math.max(cursorHeight / 2, e.pageY));
 
-  cursor.style.transform = `translate(${posX - cursorWidth / 2}px, ${posY - cursorHeight / 2}px)`;
+  cursor.style.transform = `translate(${posX - cursorWidth / 2}px, ${
+    posY - cursorHeight / 2
+  }px)`;
 
   // Get the element under the cursor
   const elementUnderCursor = document.elementFromPoint(e.clientX, e.clientY);
@@ -84,56 +85,54 @@ document.addEventListener('mousemove', function(e) {
   // Check if the element has a black background
   const bgColor = window.getComputedStyle(elementUnderCursor).backgroundColor;
 
-  if (bgColor === 'rgb(0, 0, 0)') { // Check if the background color is black
-    cursor.style.backgroundColor = 'white';
+  if (bgColor === "rgb(0, 0, 0)") {
+    // Check if the background color is black
+    cursor.style.backgroundColor = "white";
   } else {
-    cursor.style.backgroundColor = 'black';
+    cursor.style.backgroundColor = "black";
   }
 });
 
 // Run the function when the page loads and whenever the window is resized
-window.addEventListener('load', updateCursorVisibility);
-window.addEventListener('resize', updateCursorVisibility);
+window.addEventListener("load", updateCursorVisibility);
+window.addEventListener("resize", updateCursorVisibility);
 
-
-// Skills 
+// Skills
 function toggleSkills(type) {
-  var skillsList = document.getElementById('skills-list');
-  var toolsList = document.getElementById('tools-list');
-  var buttons = document.querySelectorAll('.toggle-btn');
+  var skillsList = document.getElementById("skills-list");
+  var toolsList = document.getElementById("tools-list");
+  var buttons = document.querySelectorAll(".toggle-btn");
 
-  if (type === 'skills') {
-    skillsList.style.display = 'flex';
-    toolsList.style.display = 'none';
+  if (type === "skills") {
+    skillsList.style.display = "flex";
+    toolsList.style.display = "none";
   } else {
-    skillsList.style.display = 'none';
-    toolsList.style.display = 'flex';
+    skillsList.style.display = "none";
+    toolsList.style.display = "flex";
   }
 
-  buttons.forEach(button => {
+  buttons.forEach((button) => {
     if (button.innerText.toLowerCase() === type) {
-      button.classList.add('active');
+      button.classList.add("active");
     } else {
-      button.classList.remove('active');
+      button.classList.remove("active");
     }
   });
 }
 
-
-
-
-
-// project Section 
+// project Section
 let projects = []; // Add this outside functions
 
 // Function to fetch and render projects
 async function fetchProjects() {
-try {
-  const response = await fetch('data.json'); // Adjust the path as needed
-  projects = await response.json(); // Store the fetched projects globally
-  
-  const container = document.getElementById('projects-container');
-  container.innerHTML = projects.map((project, index) => `
+  try {
+    const response = await fetch("data.json"); // Adjust the path as needed
+    projects = await response.json(); // Store the fetched projects globally
+
+    const container = document.getElementById("projects-container");
+    container.innerHTML = projects
+      .map(
+        (project, index) => `
     <div class="col-lg-4">
       <div class="card-container" onclick="showModal(${index})">
         <div class="card">
@@ -147,50 +146,55 @@ try {
         </div>
       </div>
     </div>
-  `).join('');
-} catch (error) {
-  console.error('Error fetching projects:', error);
-}
+  `
+      )
+      .join("");
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+  }
 }
 
 // Function to show the modal
 function showModal(index) {
-const project = projects[index]; // Use the globally stored projects
-document.getElementById('modal-title').textContent = project.title;
-document.getElementById('modal-image').src = project.backImage;
-document.getElementById('modal-description').textContent = project.description;
-document.getElementById('modal-link').href = project.link;
-document.getElementById('modal-link').textContent = project.title;
+  const project = projects[index]; // Use the globally stored projects
+  document.getElementById("modal-title").textContent = project.title;
+  document.getElementById("modal-image").src = project.backImage;
+  document.getElementById("modal-description").textContent =
+    project.description;
+  document.getElementById("modal-link").href = project.link;
+  document.getElementById("modal-link").textContent = project.title;
 
-// Render skills
-const skillsContainer = document.getElementById('modal-skills');
-skillsContainer.innerHTML = project.skills.map(skill => `
+  // Render skills
+  const skillsContainer = document.getElementById("modal-skills");
+  skillsContainer.innerHTML = project.skills
+    .map(
+      (skill) => `
   <span class="skill-badge">${skill}</span>
-`).join('');
+`
+    )
+    .join("");
 
-document.getElementById('myModal').style.display = 'block';
-document.body.style.overflow = 'hidden';
+  document.getElementById("myModal").style.display = "block";
+  document.body.style.overflow = "hidden";
 }
 
 // Function to close the modal
 function closeModal() {
-  document.getElementById('myModal').style.display = 'none';
-  document.body.style.overflow = 'auto';
+  document.getElementById("myModal").style.display = "none";
+  document.body.style.overflow = "auto";
 }
 
 // Close modal when clicking outside of it
-window.onclick = function(event) {
-  if (event.target == document.getElementById('myModal')) {
+window.onclick = function (event) {
+  if (event.target == document.getElementById("myModal")) {
     closeModal();
   }
-}
+};
 
 // Fetch projects on page load
 window.onload = fetchProjects;
 
-
-
-// ADWARDS MODEL 
+// ADWARDS MODEL
 function openModal(src) {
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
@@ -201,11 +205,17 @@ function openModal(src) {
 function CloseModal() {
   document.getElementById("imgModal").style.display = "none";
 }
+document.getElementById("contactNowBtn").addEventListener("click", function () {
+  window.open(
+    "https://mail.google.com/mail/?view=cm&fs=1&to=arhumnoor109@gmail.com",
+    "_blank"
+  );
+});
 
 // Attach click listeners to all images
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll(".award-card img");
-  images.forEach(img => {
+  images.forEach((img) => {
     img.addEventListener("click", function () {
       openModal(this.src);
     });
@@ -225,22 +235,20 @@ document.addEventListener("DOMContentLoaded", function () {
 function scrollReviewSlider(direction) {
   const slider = document.getElementById("reviewSlider");
   const cardWidth = 320; // Width including margin
-  slider.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+  slider.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
 }
 
-// loader 
-document.addEventListener("DOMContentLoaded", function() {
-
-    let preloader = document.getElementById("loader");
-    preloader.style.display = "block";
+// loader
+document.addEventListener("DOMContentLoaded", function () {
+  let preloader = document.getElementById("loader");
+  preloader.style.display = "block";
 });
 
-window.addEventListener("load", function() {
- 
-    let preloader = document.getElementById("loader");
-    let mainContent = document.getElementById("main-content");
-    setTimeout(function() {
-        preloader.style.display = "none";
-        mainContent.style.display = "block";
-    }, 1000); 
+window.addEventListener("load", function () {
+  let preloader = document.getElementById("loader");
+  let mainContent = document.getElementById("main-content");
+  setTimeout(function () {
+    preloader.style.display = "none";
+    mainContent.style.display = "block";
+  }, 1000);
 });
