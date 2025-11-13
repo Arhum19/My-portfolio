@@ -16,9 +16,6 @@
     <!-- Font family  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://code.jquery.com" />
-    <link rel="dns-prefetch" href="https://unpkg.com" />
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
@@ -164,7 +161,6 @@
                     src="./Assets/images/profile/Arhum_profile11.jpeg"
                     class="img-cover"
                     alt="about banner"
-                    loading="lazy"
                   />
                 </figure>
               </div>
@@ -702,7 +698,6 @@
                     src="./Assets/images/projects1/syntherx (2).png"
                     class="img-cover"
                     alt="portfolio"
-                    loading="lazy"
                   />
                   <div class="card-content">
                     <h3 class="card-title">syntherX</h3>
@@ -717,7 +712,6 @@
                     src="./Assets/images/projects1/typing-tester.png"
                     class="img-cover"
                     alt="portfolio"
-                    loading="lazy"
                   />
                   <div class="card-content">
                     <h3 class="card-title">Typing Speed Test</h3>
@@ -732,7 +726,6 @@
                     src="./Assets/images/projects1/ai-grammer (2).png"
                     class="img-cover"
                     alt="portfolio"
-                    loading="lazy"
                   />
                   <div class="card-content">
                     <h3 class="card-title">AI-Grammer Checker</h3>
@@ -747,7 +740,6 @@
                     src="./Assets/images/projects1/deentales.png"
                     class="img-cover"
                     alt="portfolio"
-                    loading="lazy"
                   />
                   <div class="card-content">
                     <h3 class="card-title">Deen Tales</h3>
@@ -762,7 +754,6 @@
                     src="./Assets/images/projects1/chatbot (2).png"
                     class="img-cover"
                     alt="portfolio"
-                    loading="lazy"
                   />
                   <div class="card-content">
                     <h3 class="card-title">AI Chatbot</h3>
@@ -777,7 +768,6 @@
                     src="./Assets/images/projects1/finance-app.png"
                     class="img-cover"
                     alt="portfolio"
-                    loading="lazy"
                   />
                   <div class="card-content">
                     <h3 class="card-title">Finance Tracker</h3>
@@ -1124,31 +1114,15 @@ TESTIMONIALS SECTION ENDS
     });
   }
 
-  // Contact Now button functionality
-  const contactNowBtn = document.getElementById("contactNowBtn");
-  if (contactNowBtn) {
-    contactNowBtn.addEventListener("click", () => {
-      const email = "arhumnoor109@gmail.com";
-      const subject = "Project Inquiry";
-      const body = "Hello Arhum, I am interested in working with you.";
-      const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoLink;
-    });
-  }
 </script>
-
-<script src="./P.js" defer></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="./P.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script
   type="module"
   src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-  async
 ></script>
 <script
   nomodule
   src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-  async
 ></script>
