@@ -163,7 +163,7 @@ function showModal(index) {
     project.description;
   document.getElementById("modal-link").href = project.link;
   document.getElementById("modal-link").textContent = project.title;
-
+  let downloadCVBtn =  document.getElementById("downloadCVBtn");
   // Render skills
   const skillsContainer = document.getElementById("modal-skills");
   skillsContainer.innerHTML = project.skills
@@ -205,12 +205,22 @@ function openModal(src) {
 function CloseModal() {
   document.getElementById("imgModal").style.display = "none";
 }
+// Contact Me Button
 document.getElementById("contactNowBtn").addEventListener("click", function () {
   window.open(
     "https://mail.google.com/mail/?view=cm&fs=1&to=arhumnoor109@gmail.com",
     "_blank"
   );
 });
+//DOWNLOAD CV BUTTON
+if(downloadCVBtn){
+  downloadCVBtn.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.href = "./Arhum_CV.pdf";
+    link.download = "Arhum_CV.pdf";
+    link.click();
+  });
+}
 
 // Attach click listeners to all images
 document.addEventListener("DOMContentLoaded", function () {
