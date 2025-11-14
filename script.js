@@ -260,5 +260,7 @@ window.addEventListener("load", function () {
   setTimeout(function () {
     preloader.style.display = "none";
     mainContent.style.display = "block";
+    // Initialize AOS after content is displayed
+    AOS.init({ once: true, duration: 600 });
   }, 1000);
 });

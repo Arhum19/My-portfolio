@@ -20,6 +20,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
+    <!-- AOS (Animate On Scroll) Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   </head>
   <body onload="myLoader()">
     <!--=============
@@ -152,9 +155,9 @@
             </li>
           </ul>
 
-          <div class="tab-content active" data-tab-content="about">
+          <div class="tab-content active" data-tab-content="about" data-aos="fade-up">
             <div class="row">
-              <div class="col-lg-5 col-md-5">
+              <div class="col-lg-5 col-md-5" data-aos="fade-up">
                 <figure class="about-banner img-holder">
                   <img
                     src="./Assets/images/profile/Arhum_profile11.jpeg"
@@ -163,7 +166,7 @@
                   />
                 </figure>
               </div>
-              <div class="col-lg-6 col-md-6">
+              <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="section-title">Exploring the Digital Frontier.</h2>
                 <p>
                   I’m Arhum, a passionate web developer who loves creating
@@ -185,15 +188,17 @@
                         target="_blank"
                         class="social-link"
                         title="LinkedIn"
-                        >Ln.</a
                       >
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                      </a>
                       <a
                         href="https://github.com/Arhum19"
                         target="_blank"
                         class="social-link"
                         title="GitHub"
-                        >Gh.</a
                       >
+                        <ion-icon name="logo-github"></ion-icon>
+                      </a>
                     </div>
                   </li>
                 </ul>
@@ -227,7 +232,7 @@
               <!-- Services Grid -->
               <div class="row g-4">
                 <!-- Web Design & Development -->
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
                   <div
                     class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover"
                   >
@@ -251,7 +256,7 @@
                 </div>
 
                 <!-- UI/UX Development -->
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                   <div
                     class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover"
                   >
@@ -275,7 +280,7 @@
                 </div>
 
                 <!-- Mobile Design -->
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                   <div
                     class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover"
                   >
@@ -299,7 +304,7 @@
                 </div>
 
                 <!-- SEO Marketing -->
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                   <div
                     class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover"
                   >
@@ -350,7 +355,7 @@
               <!-- Education Grid -->
               <div class="row g-3">
                 <!-- Matriculation -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                   <div
                     class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover"
                   >
@@ -365,7 +370,7 @@
                 </div>
 
                 <!-- Intermediate -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                   <div
                     class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover"
                   >
@@ -382,7 +387,7 @@
                 </div>
 
                 <!-- Bachelor's Degree -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                   <div
                     class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover"
                   >
@@ -406,7 +411,7 @@
             </h3>
 
             <div class="row">
-              <div class="col-lg-3">
+              <div class="col-lg-3" data-aos="fade-up" data-aos-delay="0">
                 <div class="award-card">
                   <figure
                     class="card-banner img-holder"
@@ -424,7 +429,7 @@
                   </figure>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="award-card">
                   <figure
                     class="card-banner img-holder"
@@ -442,7 +447,7 @@
                   </figure>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
                 <div class="award-card">
                   <figure
                     class="card-banner img-holder"
@@ -480,7 +485,7 @@
       <section class="skills" id="skills">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="skills-content col-lg-5">
+            <div class="skills-content col-lg-5" data-aos="fade-up">
               <p class="section-subtitle">My skills</p>
               <h2 class="section-title">What My Programming Skills Include?</h2>
               <p class="section-text">
@@ -679,7 +684,7 @@
 ==================== -->
 
       <section class="projects" id="Projects">
-        <div class="title-wrapper">
+        <div class="title-wrapper" data-aos="fade-up">
           <p class="section-subtitle">Our Works</p>
           <h1 class="section-title">Projects</h1>
           <p class="section-text">
@@ -842,13 +847,13 @@ TESTIMONIALS SECTION
           <h1 class="text-center mb-4 text-dark">What People Says</h1>
 
           <div class="position-relative"> -->
-            <!-- Scrollable Cards -->
-            <!-- <div
+      <!-- Scrollable Cards -->
+      <!-- <div
               id="reviewSlider"
               class="review-slider d-flex gap-4 flex-nowrap"
             > -->
-              <!-- Review 1 -->
-              <!-- <div
+      <!-- Review 1 -->
+      <!-- <div
                 class="card bg-white text-dark p-3 flex-shrink-0"
                 style="width: 300px"
               >
@@ -871,8 +876,8 @@ TESTIMONIALS SECTION
                 </div>
               </div> -->
 
-              <!-- Review 2 -->
-              <!-- <div
+      <!-- Review 2 -->
+      <!-- <div
                 class="card bg-white text-dark p-3 flex-shrink-0"
                 style="width: 300px"
               >
@@ -894,8 +899,8 @@ TESTIMONIALS SECTION
                 </div>
               </div> -->
 
-              <!-- Review 3 -->
-              <!-- <div
+      <!-- Review 3 -->
+      <!-- <div
                 class="card bg-white text-dark p-3 flex-shrink-0"
                 style="width: 300px"
               >
@@ -915,8 +920,8 @@ TESTIMONIALS SECTION
                 </div>
               </div> -->
 
-              <!-- Review 3 -->
-              <!-- <div
+      <!-- Review 3 -->
+      <!-- <div
                 class="card bg-white text-dark p-3 flex-shrink-0"
                 style="width: 300px"
               >
@@ -936,8 +941,8 @@ TESTIMONIALS SECTION
                 </div>
               </div>
  -->
-              <!-- Review 3 -->
-              <!-- <div
+      <!-- Review 3 -->
+      <!-- <div
                 class="card bg-white text-dark p-3 flex-shrink-0"
                 style="width: 300px"
               >
@@ -957,8 +962,8 @@ TESTIMONIALS SECTION
                 </div>
               </div> -->
 
-              <!-- Review 3 -->
-              <!-- <div
+      <!-- Review 3 -->
+      <!-- <div
                 class="card bg-white text-dark p-3 flex-shrink-0"
                 style="width: 300px"
               >
@@ -978,11 +983,11 @@ TESTIMONIALS SECTION
                 </div>
               </div>
  -->
-              <!-- Add more reviews here -->
-            <!-- </div> -->
+      <!-- Add more reviews here -->
+      <!-- </div> -->
 
-            <!-- Navigation arrows -->
-            <!-- <div class="text-center mt-4">
+      <!-- Navigation arrows -->
+      <!-- <div class="text-center mt-4">
               <button
                 class="btn btn-outline-dark me-2"
                 onclick="scrollReviewSlider(-1)"
@@ -1011,8 +1016,8 @@ TESTIMONIALS SECTION ENDS
       <section class="hello" id="contact">
         <div class="container m-0-auto">
           <div class="row justify-content-center m-0-auto text-center">
-            <h4>Contact</h4>
-            <div class="col-lg-8 text-center">
+            <h4 data-aos="fade-up">Contact</h4>
+            <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="100">
               <h1>Get In Touch</h1>
               <p>
                 My inbox is always open. Whether you're interested in a
@@ -1037,7 +1042,8 @@ TESTIMONIALS SECTION ENDS
                 </li>
                 <li>
                   <a
-                    href="https://www.linkedin.com/in/muhammad-arhum-bin-abid-69379b301/" target="_blank"
+                    href="https://www.linkedin.com/in/muhammad-arhum-bin-abid-69379b301/"
+                    target="_blank"
                   >
                     <ion-icon name="logo-linkedin"></ion-icon>
                   </a>
@@ -1112,7 +1118,6 @@ TESTIMONIALS SECTION ENDS
       }
     });
   }
-
 </script>
 <script src="./P.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
